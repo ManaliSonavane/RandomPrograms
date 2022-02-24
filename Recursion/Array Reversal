@@ -1,0 +1,27 @@
+import java.util.*;
+import java.io.*;
+
+public class Main {
+    public static void main(String args[]) {
+            Scanner s=new Scanner(System.in);
+            int n= s.nextInt();
+            int[] arr=new int[n];
+             for(int i=0;i<n;i++){
+                arr[i]=s.nextInt();
+            }
+            int count=0;
+            for(int i=0;i<n;i++){
+                count++;
+            }
+            int[] narr= new int[n];
+            //System.out.println(n);
+            System.out.println(Arrays.toString(rev(arr,0,n,narr)));
+    }
+        public static int[] rev(int[] arr, int index,int n, int[] narr){
+          if(index ==  n)
+           return narr;
+          narr[n-index-1]= arr[index];
+           return rev(arr,index+1,n,narr);
+     }
+     
+}
