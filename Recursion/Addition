@@ -1,0 +1,14 @@
+import java.util.*;
+import java.io.*;
+
+public class Main {
+    public static void main(String args[]) {
+            int x=5;
+            System.out.println(add(x));
+    }
+     public static int add(int n){
+         if(n==1)
+          return 1;
+         return add(n-1) + n;
+     }
+}
